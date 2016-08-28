@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Adv Jquery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// 	program
+			$('.alert').click(function(){
+				alert('you clicked me!');
+			});
+			$('.add_new').click(function(){
+				$('#buttons').append("<button class='alert'>Im Dynamically added button </button>");
+			});
+			// To apply same class to apply for dynamically data
+			$(document).on('click','.alert',function(){
+					alert('you clicked me!');
+			})
+		})
+
+	</script>
+</head>
+<body>
+	<h1>Static Content</h1>
+	<div>
+		<button class="alert">Click Me for new Message!</button>
+		<button class="alert">Click Me for new Message!</button>
+		<button class="alert">Click Me for new Message!</button>
+		<button class="add_new">Click Me to add new button</button>
+	</div>
+	<h1>Dynamically Added Data</h1>
+	<div id="buttons">
+	</div>
+</body>
+</html>
